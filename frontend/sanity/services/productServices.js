@@ -1,5 +1,4 @@
 import { client, writeClient } from "../client";
-import { client, writeClient } from "../client";
 //Les mer om GROQ (Sanitys spørrespråk): https://www.sanity.io/docs/how-queries-work
 
 //Funksjon som henter alt innhold av type products fra Sanity
