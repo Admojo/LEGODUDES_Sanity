@@ -12,13 +12,13 @@ export async function fetchAllCategories() {
 
 //Funksjon som spør Sanity om å hente alle kategorier som matcher en slug
 export async function fetchCategoryBySlug(slug) {
-    const data = await client.fetch(`*[_type == "categories" && categoryurl.current == $slug] {
-        _id, 
+    const data = await client.fetch(`*[_type == "categories" && categoryurl.current == $slug]{
+        _id,
         categorytitle,
-        "catProducts": *[_type =="products" && references (^._id)] {
+        "catProducts": *[_type == "products" && references(^._id)]{
             _id,
             productname,
-            "slug": producturl.current, 
+            "slug": producturl.current,
             price,
             stock,
             "catname": category->categorytitle,
