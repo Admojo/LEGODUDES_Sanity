@@ -15,6 +15,7 @@ const [cart, setCart] = useState([])
   return (
     <Layout cart={cart} setCart={setCart} amount={amount} category={category}>
         <Routes>
+          {/* :slug -> dynmaisk verdi som kan endre seg */}
             <Route path=":slug" element={<Home />}/>
             <Route path="/produkter/:id" element={<ContentPage amount={amount} setAmount={setAmount} category={category} setCart={setCart} cart={cart}/>}/>
         </Routes>
