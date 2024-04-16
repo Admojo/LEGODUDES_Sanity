@@ -22,19 +22,13 @@ export default function ContentPage({amount, setAmount, category, setCart, cart}
     return(
         <main>
           <Title category={catInfo?.categorytitle} />
-          {/*products.map(product => 
-          <ProductCard
-          cart={cart} 
-          setCart={setCart}
-          prodid={product.prodid}
-          key={product.prodid} 
-          category={product.category} 
-          title={product.title} 
-          img={product.imagefile} 
-          price={product.price}
-          amount={amount}
-          setAmount={setAmount}
-          /> )*/}
+          {/* catInfo, objektet vi spør på */}
+          {/* For hvert produkt, ta vare på index, slik at vi kan lagre data output på key id */}
+          {/* for hvert product.id -> skrive ut et productCard og vi sender inn key{index} og productInfo{product} - dette sendes til 
+          productcard-komponenten */}
+          {catInfo?.catProducts.map((product, index) => 
+          <ProductCard key={index} productInfo={product} setAmount={setAmount} setCart={setCart} cart={cart} />)
+          }
         </main>
     )
 }
