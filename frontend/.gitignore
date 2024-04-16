@@ -1,5 +1,4 @@
-/frontend/node_modules
-/sanity/node_modules# Logs
+# Logs
 logs
 *.log
 npm-debug.log*
@@ -129,6 +128,3 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-
-#Mac config
-.DS_St
