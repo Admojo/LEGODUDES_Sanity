@@ -8,3 +8,16 @@ export const client = createClient({
   useCdn: true,
   apiVersion: "2022-03-07"
 })
+
+// skVW3QYMCN61PLq4P9RV4CyrXtAETCHfVYFoIo8Eb6eyOjwBu1BSE9bRiMQkCff8j5JfPqXMa4jS9xsViBUICXAdk0VBavAqlOAhFDUqnDJZUo9YibfC8lQS8tBgbhjO8ECyHKuF3exjZluo7gCjk8C1Bav6XRyVAu14cO2kO8yYMs0Gm2w9
+
+export const writeClient = createClient ({
+  projectId: "xbpab6cz",
+  dataset: "production",
+  useCdn: false,
+  apiVersion: "2022-03-07",
+  token: 
+  "skVW3QYMCN61PLq4P9RV4CyrXtAETCHfVYFoIo8Eb6eyOjwBu1BSE9bRiMQkCff8j5JfPqXMa4jS9xsViBUICXAdk0VBavAqlOAhFDUqnDJZUo9YibfC8lQS8tBgbhjO8ECyHKuF3exjZluo7gCjk8C1Bav6XRyVAu14cO2kO8yYMs0Gm2w9"
+
+})
+
