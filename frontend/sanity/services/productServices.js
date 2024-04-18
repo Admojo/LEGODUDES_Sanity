@@ -20,6 +20,7 @@ export async function fetchAllProducts() {
 //Funksjon som henter et produkt basert på en slug:
 export async function fetchProductBySlug(slug) {
     const data = await client.fetch(`*[_type == "products" && producturl.current == $slug]{
+        id,
         productname,
         description,
         "categoryname": category->categorytitle,
@@ -36,8 +37,10 @@ export async function fetchProductBySlug(slug) {
 export async function updateReview(productid,reviewer,comment,rating) {
     const result = await writeClient
     .patch(productid).setIfMissing({reviews: []})
-    .append("reviews", [{reviewer: reviewer, comment: comment, rating: rating}])
+    .append("reviews", [{reviewer: reviewer, comment: comment, rating: rating}]) // Spesielt for arryafelter, at vi legger til noe på slutten, navn på felter må mathce name: xxxx, i reviews.js i SchemaTypes/review.js
     .commit({autoGenerateArrayKeys: true})
     .then(() => {return "Success"})
     .catch((error) => {return "Error: " + error.message})
+
+    return result
 }
