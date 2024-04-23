@@ -26,25 +26,25 @@ export default function ProductPage() {
     }
 
     //Funksjon: knapp når bruker bkerefeter innsending av anmeldelse 
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        if (rating === 0){
-            // document.getElementById("formessage").innerHTML
-            setFormMessage("Du må sette en vurdering")
-        }
-        else {
-            const result = await updateReview(product._id, reviewer, comment, rating) //--> rekkefølgen av parametere må være LIK som i updateReview
-            if(result == "Success") {
-                setFormMessage("Din anmeldelse er registrert")
-                product.reviews.push({product_id, reviewer, comment, rating}) // sette inn et produkt i staten 
-            } 
-            else {
-                setFormMessage(result)
-            }
-            console.log(result)
-        }
-        console.log("Knapp trykket ", result)
-    }
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault()
+    //     if (rating === 0){
+    //         // document.getElementById("formessage").innerHTML
+    //         setFormMessage("Du må sette en vurdering")
+    //     }
+    //     else {
+    //         const result = await updateReview(product._id, reviewer, comment, rating) //--> rekkefølgen av parametere må være LIK som i updateReview
+    //         if(result == "Success") {
+    //             setFormMessage("Din anmeldelse er registrert")
+    //             product.reviews.push({product_id, reviewer, comment, rating}) // sette inn et produkt i staten 
+    //         } 
+    //         else {
+    //             setFormMessage(result)
+    //         }
+    //         console.log(result)
+    //     }
+    //     console.log("Knapp trykket ", result)
+    // }
     //handleSubmit-funksjon for når en bruker sender en anmeldelse
     const handleSubmit = async (e) => {
         e.preventDefault()
